@@ -15,7 +15,13 @@
             <!-- 通常メニュー -->
             <div class="collapse navbar-collapse" id="navbar-collapse-tasklist">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>{!! link_to_route('tasks.create', '新規メッセージの投稿') !!}</li>
+                    @if (Auth::check())
+                        <li>{!! link_to_route('tasks.create', '新規メッセージの投稿') !!}</li>
+                    @else
+                        <li>{!! link_to_route('signup.get', 'Signup') !!}</li>
+                        <!-- ログインリンク置く -->
+                        <li><a href="#">Login</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
