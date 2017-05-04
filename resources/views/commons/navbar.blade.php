@@ -19,8 +19,7 @@
                         <li>{!! link_to_route('tasks.create', '新規メッセージの投稿') !!}</li>
                     @else
                         <li>{!! link_to_route('signup.get', 'Signup') !!}</li>
-                        <!-- ログインリンク置く -->
-                        <li><a href="#">Login</a></li>
+                        <li>{!! link_to_route('login.get', 'Login') !!}</a></li>
                     @endif
                 </ul>
             </div>
